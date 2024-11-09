@@ -1,2 +1,2 @@
-# fixed-window-rate-limiter
-Fixed Window Rate Limiter
+# Fixed Window Rate Limiter
+
