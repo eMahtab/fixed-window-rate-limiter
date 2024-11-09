@@ -25,12 +25,7 @@ public class FixedWindowRateLimiter {
             windowStartTime = currentTime;
             requestCount.set(0);
         }
-        // Check if the request can be allowed
-        if (requestCount.incrementAndGet() <= maxRequests) {
-            return true; // Request allowed
-        } else {
-            return false; // Request throttled
-        }
+        return requestCount.incrementAndGet() <= maxRequests;
     }
 
     public static void main(String[] args) throws InterruptedException {
