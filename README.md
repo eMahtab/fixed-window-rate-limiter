@@ -8,9 +8,8 @@
 
 **Cons:**
 
-**Burstiness at window edges:** Can allow twice the rate limit of traffic if requests come in bursts at the boundary between two windows.
-
-**Inflexibility:** Does not account for varying request rates or smooth out bursts over time.
+**Burst Traffic Problem:**
+If a burst of requests occurs near the end of one window and the beginning of the next, it can double the allowed limit. For example, if the limit is 10 requests per second, 10 requests at the end of one window and 10 at the start of the next could allow 20 requests in a short time.
 
 ```java
 import java.time.Instant;
