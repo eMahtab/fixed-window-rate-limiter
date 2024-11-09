@@ -1,14 +1,16 @@
 # Fixed Window Rate Limiter
 
-Pros:
+**Pros:**
 
-Simplicity: Easy to implement and understand.
-Performance: Efficient under low to moderate load due to minimal computational overhead.
+**Simplicity:** Easy to implement and understand.
 
-Cons:
+**Performance:** Efficient under low to moderate load due to minimal computational overhead.
 
-Burstiness at window edges: Can allow twice the rate limit of traffic if requests come in bursts at the boundary between two windows.
-Inflexibility: Does not account for varying request rates or smooth out bursts over time.
+**Cons:**
+
+**Burstiness at window edges:** Can allow twice the rate limit of traffic if requests come in bursts at the boundary between two windows.
+
+**Inflexibility:** Does not account for varying request rates or smooth out bursts over time.
 
 ```java
 import java.time.Instant;
