@@ -48,10 +48,35 @@ public class FixedWindowRateLimiter {
         }
     }
 }
-
+```
+### Execution Output :
+```
+Request 1: Allowed at 2024-11-09T02:18:34.391914600Z
+Request 2: Allowed at 2024-11-09T02:18:35.437279700Z
+Request 3: Allowed at 2024-11-09T02:18:36.448884Z
+Request 4: Allowed at 2024-11-09T02:18:37.449886600Z
+Request 5: Allowed at 2024-11-09T02:18:38.452924Z
+Request 6: Throttled at 2024-11-09T02:18:39.456711400Z
+Request 7: Throttled at 2024-11-09T02:18:40.464231600Z
+Request 8: Throttled at 2024-11-09T02:18:41.478928700Z
+Request 9: Throttled at 2024-11-09T02:18:42.494495800Z
+Request 10: Throttled at 2024-11-09T02:18:43.508222600Z
+Request 11: Allowed at 2024-11-09T02:18:44.523985700Z
+Request 12: Allowed at 2024-11-09T02:18:45.526747900Z
+Request 13: Allowed at 2024-11-09T02:18:46.541044400Z
+Request 14: Allowed at 2024-11-09T02:18:47.544245700Z
+Request 15: Allowed at 2024-11-09T02:18:48.545852600Z
+Request 16: Throttled at 2024-11-09T02:18:49.561031500Z
+Request 17: Throttled at 2024-11-09T02:18:50.563952100Z
+Request 18: Throttled at 2024-11-09T02:18:51.566120200Z
+Request 19: Throttled at 2024-11-09T02:18:52.567776600Z
+Request 20: Throttled at 2024-11-09T02:18:53.571288700Z
+Request 21: Allowed at 2024-11-09T02:18:54.576001300Z
+Request 22: Allowed at 2024-11-09T02:18:55.588448300Z
 ```
 
-### Sleep randomly between requests : Thread.sleep((long)(Math.random() * 3500));
+
+## Simulating random delay between requests : Thread.sleep((long)(Math.random() * 3500));
 Sleep randomly between 0 to 3.5 second between requests
 ```
 Request 1: Allowed at 2024-11-09T01:48:54.155444200Z
