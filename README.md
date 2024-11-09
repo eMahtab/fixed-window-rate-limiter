@@ -45,10 +45,11 @@ public class FixedWindowRateLimiter {
         FixedWindowRateLimiter rateLimiter = new FixedWindowRateLimiter(5, 10000);
         // Simulate 22 incoming requests
         for (int i = 0; i < 22; i++) {
+            Instant now = Instant.now();
             if (rateLimiter.isAllowed()) {
-                System.out.println("Request " + (i + 1) + ": Allowed");
+                System.out.println("Request " + (i + 1) + ": Allowed at "+ now);
             } else {
-                System.out.println("Request " + (i + 1) + ": Throttled");
+                System.out.println("Request " + (i + 1) + ": Throttled at "+ now);
             }
             Thread.sleep(1000); // Sleep for 1 second between requests
         }
