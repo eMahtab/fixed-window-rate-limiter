@@ -25,7 +25,6 @@ public class FixedWindowRateLimiter {
             windowStartTime = currentTime;
             requestCount.set(0);
         }
-
         // Check if the request can be allowed
         if (requestCount.incrementAndGet() <= maxRequests) {
             return true; // Request allowed
@@ -37,7 +36,7 @@ public class FixedWindowRateLimiter {
     public static void main(String[] args) throws InterruptedException {
         // Example: Allow up to 5 requests per 10 seconds window
         FixedWindowRateLimiter rateLimiter = new FixedWindowRateLimiter(5, 10000);
-        // Simulate 10 incoming requests
+        // Simulate 22 incoming requests
         for (int i = 0; i < 22; i++) {
             if (rateLimiter.allowRequest()) {
                 System.out.println("Request " + (i + 1) + ": Allowed");
