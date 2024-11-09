@@ -96,3 +96,9 @@ Request 20: Allowed at 2024-11-09T01:49:31.424657900Z
 Request 21: Allowed at 2024-11-09T01:49:33.937672600Z
 Request 22: Allowed at 2024-11-09T01:49:36.796995200Z
 ```
+
+# References :
+
+https://www.rdiachenko.com/posts/arch/rate-limiting/fixed-window-algorithm
+
+https://medium.com/@devenchan/implementing-rate-limiting-in-java-from-scratch-fixed-window-and-sliding-window-implementation-a6e8d6407d17
