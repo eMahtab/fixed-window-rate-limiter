@@ -51,8 +51,8 @@ public class FixedWindowRateLimiter {
 
 ```
 
-
-
+### Sleep randomly between requests : Thread.sleep((long)(Math.random() * 3500));
+Sleep randomly between 0 to 3.5 second between requests
 ```
 Request 1: Allowed at 2024-11-09T01:48:54.155444200Z
 Request 2: Allowed at 2024-11-09T01:48:56.627097500Z
