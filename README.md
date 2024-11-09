@@ -17,7 +17,7 @@ public class FixedWindowRateLimiter {
         this.windowStartTime = Instant.now().toEpochMilli();
     }
 
-    public synchronized boolean allowRequest() {
+    public synchronized boolean isAllowed() {
         long currentTime = Instant.now().toEpochMilli();
         // Check if the current time is outside the current window
         if (currentTime - windowStartTime >= windowDurationMillis) {
@@ -38,7 +38,7 @@ public class FixedWindowRateLimiter {
         FixedWindowRateLimiter rateLimiter = new FixedWindowRateLimiter(5, 10000);
         // Simulate 22 incoming requests
         for (int i = 0; i < 22; i++) {
-            if (rateLimiter.allowRequest()) {
+            if (rateLimiter.isAllowed()) {
                 System.out.println("Request " + (i + 1) + ": Allowed");
             } else {
                 System.out.println("Request " + (i + 1) + ": Throttled");
